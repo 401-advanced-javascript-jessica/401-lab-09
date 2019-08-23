@@ -6,9 +6,9 @@ const modelLoader = require('../middleware/model-loader');
 router.param('model', modelLoader);
 
 /**
- * This function comment is parsed by doctrine
+ * This function gets all the objects
  * @route GET /api/v1/:model
- * @param {string} model name required
+ * @param {string} model.query.required - model name required
  * @returns {object} 200
  * @returns {Error}  default - Unexpected error
  */
@@ -54,11 +54,11 @@ router.delete('/api/v1/:model/:id', handleDelete);
 // ROUTE HANDLER FUNCTIONS
 
 /**
- * Retrieves one category
- * @param {request}
- * @param {response}
- * @param {next}
- * @returns
+ * This function gets all the objects
+ * @route GET /api/v1/:model
+ * @param {string} model name required
+ * @returns {object} 200
+ * @returns {Error}  default - Unexpected error
  */
 function handleGetAll(request,response,next) {
     // expects an array of object to be returned from the model
