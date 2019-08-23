@@ -55,10 +55,10 @@ router.delete('/api/v1/:model/:id', handleDelete);
 
 /**
  * This function gets all the objects
- * @route GET /api/v1/:model
- * @param {string} model name required
- * @returns {object} 200
- * @returns {Error}  default - Unexpected error
+ * @param {request} request object
+ * @param {response} response object
+ * @param {next} next function
+ * @returns
  */
 function handleGetAll(request,response,next) {
   // expects an array of object to be returned from the model
@@ -75,9 +75,9 @@ function handleGetAll(request,response,next) {
 
 /**
  * Retrieves all the categories in the database
- * @param {request}
- * @param {response}
- * @param {next}
+ * @param {request} request object
+ * @param {response} response object
+ * @param {next} next function
  * @returns
  */
 function handleGetOne(request,response,next) {
@@ -89,9 +89,9 @@ function handleGetOne(request,response,next) {
 
 /**
  * Creates a category
- * @param {request}
- * @param {response}
- * @param {next}
+ * @param {request} request object
+ * @param {response} response object
+ * @param {next} next function
  * @returns
  */
 function handleCreate(request,response,next) {
@@ -105,9 +105,9 @@ function handleCreate(request,response,next) {
 
 /**
  * Updates a category
- * @param {request}
- * @param {response}
- * @param {next}
+ * @param {request} request object
+ * @param {response} response object
+ * @param {next} next function
  * @returns
  */
 function handleUpdate(request,response,next) {
@@ -119,9 +119,9 @@ function handleUpdate(request,response,next) {
 
 /**
  * Deletes a category
- * @param {request}
- * @param {response}
- * @param {next}
+ * @param {request} request object
+ * @param {response} response object
+ * @param {next} next function
  * @returns
  */
 function handleDelete(request,response,next) {
