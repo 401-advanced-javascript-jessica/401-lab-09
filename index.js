@@ -7,6 +7,6 @@ const mongooseOptions = {
   useNewUrlParser:true,
   useCreateIndex: true,
 };
-mongoose.connect('mongodb://localhost:27017/lab09', mongooseOptions);
+mongoose.connect(process.env.MONGODB_URI, mongooseOptions);
 
-require('./src/app.js').start(3000);
+require('./src/app.js').start(process.env.PORT);
