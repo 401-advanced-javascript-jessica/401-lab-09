@@ -9,7 +9,7 @@ let options = {
       title: 'Swaggertastic Docs!',
       version: '1.0.1',
     },
-    host: 'https://jessica-401-lab-09.herokuapp.com',
+    host: 'localhost:3000',
     basePath: '/',
     produces: [
       'application/json',
